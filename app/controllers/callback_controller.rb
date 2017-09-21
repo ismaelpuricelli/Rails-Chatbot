@@ -1,7 +1,7 @@
 class CallbackController < ApplicationController
   def index
   	if params["hub.verify_token"] == "fbToken"
-  		render text: params["hub.challenge"]
+  		render plain: params["hub.challenge"]
   	end
   end
 
