@@ -16,7 +16,7 @@ protect_from_forgery with: :null_session
   			sender = m["sender"]["id"]
   			text = m["message"]["text"]
 
-  			json_to_send = {"recipient":{"id":"#{sender}"}, {"message":{"text":"#{text}"}}}
+  			json_to_send = {"recipient":{"id":"#{sender}"}, "message":{"text":"#{text}"}}
   			HTTP.post(data_url, json:json_to_send)
   		end
   	end
