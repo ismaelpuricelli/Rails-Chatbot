@@ -10,7 +10,7 @@ protect_from_forgery with: :null_session
   	usr_request = request.body.read
   	usr_data = JSON.parse(usr_request)
 
-  	entries = data["entry"]
+  	entries = usr_data["entry"]
   	entries.each do |e|
   		e["messaging"].each do |m|
   			sender = m["sender"]["id"]
